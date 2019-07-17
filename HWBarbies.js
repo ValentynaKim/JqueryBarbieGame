@@ -64,6 +64,7 @@ $("button").on("click", function () {
         $(".yourCharacter p:last-child").text("HP: " + par1HP);
         win();
         lose();
+        winAll();
     }
 
 });
@@ -88,7 +89,7 @@ function lose() {
 }
 
 function winAll() {
-    if (($(".defender").children().length = 1) && ($(".DollsToRun").children().length = 1)) {
+    if (($(".defender").children().length <= 1) && ($(".DollsToRun").children().length <= 1)) {
         $(".fightSection").text("You won!");
         $("button").text("Restart");
         $("button").on("click", function () {
